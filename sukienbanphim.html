@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỰ KIỆN BÀN PHÍM</title>
+</head>
+<body onload="doready()">
+    <img id="nobita" src="image/Nobita001.png" style="position:absolute; left: 0; top: 0; "height="260px" width="200px"/>
+    <script>
+        function upAP() {
+            let keyup=document.getElementById("nobita");
+            keyup.style.top=parseInt(keyup.style.top) - 20 + "px";
+        }
+        function downAP() {
+            let keydown=document.getElementById("nobita");
+            keydown.style.top=parseInt(keydown.style.top) + 20 + "px";
+        }
+        function rightAP() {
+            let rightkey=document.getElementById("nobita");
+            rightkey.style.left=parseInt(rightkey.style.left) + 20 + "px";
+        }
+        function leftAP() {
+            let leftkey=document.getElementById("nobita");
+            leftkey.style.left=parseInt(leftkey.style.left) - 20 + "px";
+        }
+        function moveselection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftAP();
+                    break;
+                case 39:
+                    rightAP();
+                    break;
+                case 38:
+                    upAP();
+                    break;
+                case 40:
+                    downAP();
+                    break;
+            }
+        }
+        function doready() {
+            window.addEventListener("keydown", moveselection);
+        }
+    </script>
+</body>
+</html>

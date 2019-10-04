@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng cửu chương</title>
+</head>
+<body>
+    <script>
+        var ut;
+        ut="<table border='1' width='300' cellpadding='3' cellspacing='3'>"
+        for (var j=1;j<=9;j++)
+        {
+            for (var i=2;i<=9;i++)
+            {
+            var kq=i*j;
+            ut =ut+"<td>"+i+"x"+j+ "=" + kq+"</td>";
+        }
+            ut=ut+"</tr>";
+        }
+        ut=ut+"</table>";
+        document.write(ut);
+    </script>
+</body>
+</html>
