@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính đơn giản</title>
+</head>
+<body>
+<td><input id="nhap"></td>
+<br>
+<div>
+    <input class="btn" type="button" value="(" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value=")" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="%" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="AC" onclick="bta(value)"style="width: 40px">
+</div>
+<div>
+    <input class="btn" type="button" value="7" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="8" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="9" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="/" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="CE" onclick="btx(value)" style="width: 40px">
+</div>
+
+<div>
+    <input class="btn" type="button" value="4" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="5" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="6" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="*" onclick="bt(value)"style="width: 40px">
+</div>
+<div>
+    <input class="btn" type="button" value="1" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="2" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="3" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="-" onclick="bt(value)"style="width: 40px">
+</div>
+<div>
+    <input class="btn" type="button" value="0" onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="." onclick="bt(value)"style="width: 40px">
+    <input class="btn" type="button" value="=" onclick="bang(value)"style="width: 40px">
+    <input class="btn" type="button" value="+" onclick="bt(value)"style="width: 40px">
+</div>
+<script>
+    function bt(value) {
+        document.getElementById("nhap").value +=value;
+    }
+    function bang(value) {
+        document.getElementById("nhap").value = eval(document.getElementById("nhap").value);
+    }
+    function bta() {
+        document.getElementById("nhap").value="";
+    }
+    function btx() {
+        let btxx = document.getElementById("nhap").value;
+        btxx=btxx.substring(0,btxx.length - 1);
+        //console.log(btxx);
+        document.getElementById("nhap").value=btxx;
+
+    }
+</script>
+</html>
